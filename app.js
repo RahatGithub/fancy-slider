@@ -134,4 +134,9 @@ searchBtn.addEventListener('click', function () {
 
 sliderBtn.addEventListener('click', function () {
   createSlider()
+  const dots = document.getElementById('dots');
+  dots.innerHTML = '';
+  for(let i=0; i<sliders.length; i++){
+    dots.innerHTML += `<span class="dot" onclick="changeItem(${i})"></span>`
+  }
 })
